@@ -14,11 +14,11 @@
 </head>
 <body>
   <h1>Map Start</h1>
-  <div id="map"></div>
+  <div id="map" style="max-width: 1500px; margin: 0 auto; min-height: 100vh;">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     // Initialize the map
-    const map = L.map('map').setView([37.7749, -122.4194], 5);
+    const map = L.map('map').setView([37.7778, -122.4396], 13);
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -36,5 +36,10 @@
         });
       });
   </script>
+</div>
+ 
+<form>
+  <input type="text" name="form_prompt" placeholder="Location" maxlength="100">
+</form> 
 </body>
 </html>

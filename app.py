@@ -10,7 +10,7 @@ app = Flask(__name__)
 #Global Variables
 # Sample data to display on the map
 locations = [
-    {"name": "San Francisco", "lat": 37.7749, "lng": -122.4194},
+    {"name": "San Francisco", "lat": 37.7649, "lng": -122.4194},
     {"name": "Los Angeles", "lat": 34.0522, "lng": -118.2437},
     {"name": "Seattle", "lat": 39.6062, "lng": -122.3321},
 ]
@@ -31,12 +31,9 @@ def data():
 @app.route('/submit', methods=['POST', 'GET'])
 def submit():
 
-
     # Handle GET requests by redirecting to home
     if request.method == 'GET':
         return redirect(url_for('home'))
-
-
 
 
     #puts in prompts
