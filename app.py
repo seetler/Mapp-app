@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 from datetime import datetime
+import random
 
 app = Flask(__name__)
 
@@ -11,8 +12,14 @@ app = Flask(__name__)
 # Sample data to display on the map
 locations = [
     {"name": "San Francisco", "lat": 37.7649, "lng": -122.4194},
-    {"name": "Los Angeles", "lat": 34.0522, "lng": -118.2437},
-    {"name": "Seattle", "lat": 39.6062, "lng": -122.3321},
+    {"name": "New York", "lat": 40.7306, "lng": -73.9352},
+    {"name": "Random 1" , "lat": random.random()*3+37, "lng": random.random()*48.48-122.4194},
+    {"name": "Random 2" , "lat": random.random()*3+37, "lng": random.random()*48.48-122.4194},
+    {"name": "Random 3" , "lat": random.random()*3+37, "lng": random.random()*48.48-122.4194},
+    {"name": "Random 4" , "lat": random.random()*3+37, "lng": random.random()*48.48-122.4194},
+    {"name": "Random 5" , "lat": random.random()*3+37, "lng": random.random()*48.48-122.4194},
+
+
 ]
 
 
